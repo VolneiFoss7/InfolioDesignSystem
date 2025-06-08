@@ -100,5 +100,7 @@ struct TextFieldView: View {
 }
 
 #Preview {
-    TextFieldView(viewModel: TextFieldViewModel(label: "Search ..."), style: .outlined)
+    if #available(iOS 15.0, *) {
+        TextFieldView(viewModel: TextFieldViewModel(label: "Search ..."), style: .outlined)
+    }
 }
