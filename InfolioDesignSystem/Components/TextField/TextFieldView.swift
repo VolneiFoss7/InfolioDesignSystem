@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-final class TextFieldViewModel: ObservableObject {
-    @Published var text: String = ""
-    @Published var searchActive: Bool = false
-}
-
 struct TextFieldView: View {
     
     enum Style {
@@ -62,7 +57,7 @@ struct TextFieldView: View {
     
     var searchInput: some View {
         HStack {
-            TextField("Search", text: $viewModel.text)
+            TextField(self.viewModel.label, text: $viewModel.searchText)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
                 .background(style.backgroundColor)
@@ -71,7 +66,7 @@ struct TextFieldView: View {
                         .stroke(style.borderColor, lineWidth: 1)
                 }
                 .overlay {
-                    if !self.viewModel.text.isEmpty {
+                    if !self.viewModel.searchText.isEmpty {
                         clearText
                     }
                 }
@@ -93,7 +88,7 @@ struct TextFieldView: View {
     
     private var clearText: some View {
         Button(action: {
-            viewModel.text = ""
+            viewModel.searchText = ""
         }) {
             Image(systemName: "xmark.circle.fill")
                 .foregroundColor(.gray)
@@ -104,5 +99,5 @@ struct TextFieldView: View {
 }
 
 #Preview {
-    TextFieldView(viewModel: TextFieldViewModel(), style: .outlined)
+    TextFieldView(viewModel: TextFieldViewModel(label: "Search ..."), style: .outlined)
 }
