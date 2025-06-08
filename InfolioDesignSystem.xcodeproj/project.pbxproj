@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A2483272C9ED453491DA5801 /* Pods_InfolioDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968CB53CAB549FACE6B95D17 /* Pods_InfolioDesignSystem.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		1BD2C3988D56D71C8BFB4CC9 /* Pods-InfolioDesignSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfolioDesignSystem.debug.xcconfig"; path = "Target Support Files/Pods-InfolioDesignSystem/Pods-InfolioDesignSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		4FFF55BF2DF51FDA0020F88A /* InfolioDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InfolioDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		968CB53CAB549FACE6B95D17 /* Pods_InfolioDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfolioDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D613A266DCB8F7641D355AEA /* Pods-InfolioDesignSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfolioDesignSystem.release.xcconfig"; path = "Target Support Files/Pods-InfolioDesignSystem/Pods-InfolioDesignSystem.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2483272C9ED453491DA5801 /* Pods_InfolioDesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				4FFF55C12DF51FDA0020F88A /* InfolioDesignSystem */,
 				4FFF55C02DF51FDA0020F88A /* Products */,
+				D243890C05E56E08DC497F83 /* Pods */,
+				C5F773569C5B85707A110CBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +66,24 @@
 				4FFF55BF2DF51FDA0020F88A /* InfolioDesignSystem.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C5F773569C5B85707A110CBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				968CB53CAB549FACE6B95D17 /* Pods_InfolioDesignSystem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D243890C05E56E08DC497F83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BD2C3988D56D71C8BFB4CC9 /* Pods-InfolioDesignSystem.debug.xcconfig */,
+				D613A266DCB8F7641D355AEA /* Pods-InfolioDesignSystem.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,6 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FFF55C72DF51FDA0020F88A /* Build configuration list for PBXNativeTarget "InfolioDesignSystem" */;
 			buildPhases = (
+				E46B48E4672E8AF008FCBF75 /* [CP] Check Pods Manifest.lock */,
 				4FFF55BA2DF51FDA0020F88A /* Headers */,
 				4FFF55BB2DF51FDA0020F88A /* Sources */,
 				4FFF55BC2DF51FDA0020F88A /* Frameworks */,
@@ -88,8 +117,6 @@
 				4FFF55C12DF51FDA0020F88A /* InfolioDesignSystem */,
 			);
 			name = InfolioDesignSystem;
-			packageProductDependencies = (
-			);
 			productName = InfolioDesignSystem;
 			productReference = 4FFF55BF2DF51FDA0020F88A /* InfolioDesignSystem.framework */;
 			productType = "com.apple.product-type.framework";
@@ -137,6 +164,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E46B48E4672E8AF008FCBF75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfolioDesignSystem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FFF55BB2DF51FDA0020F88A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -150,6 +202,7 @@
 /* Begin XCBuildConfiguration section */
 		4FFF55C82DF51FDA0020F88A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD2C3988D56D71C8BFB4CC9 /* Pods-InfolioDesignSystem.debug.xcconfig */;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -191,6 +244,7 @@
 		};
 		4FFF55C92DF51FDA0020F88A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D613A266DCB8F7641D355AEA /* Pods-InfolioDesignSystem.release.xcconfig */;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
