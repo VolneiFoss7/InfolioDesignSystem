@@ -17,10 +17,10 @@ Inclui paleta de cores, tipografia e UI Components customizados.
   spec.source       = { :git => 'https://github.com/VolneiFoss7/InfolioDesignSystem.git', :tag => spec.version.to_s }
 
   # Altere este caminho conforme a estrutura do seu projeto
-  spec.source_files  = 'Sources/**/*.swift'
+  spec.source_files = 'InfolioDesignSystem/**/*.swift'
 
   # Se tiver assets (ex: .xcassets, .xibs, arquivos json, etc.)
-  spec.resources     = 'Resources/**/*'
+  # spec.resources     = 'Resources/**/*'
 
   # Se o pod depende de outro pod
   # spec.dependency 'Alamofire'
